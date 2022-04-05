@@ -1,5 +1,4 @@
 import csv
-import os
 from urllib import request
 import datetime
 import time
