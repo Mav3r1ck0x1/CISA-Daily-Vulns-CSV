@@ -1,8 +1,16 @@
-import csv
 from urllib import request
+from termcolor import colored
+import csv
 import datetime
 import time
 import os
+import pyfiglet
+
+
+
+
+ascii_banner = pyfiglet.figlet_format("CISA CVEs", "moscow")
+print (colored(ascii_banner, "red"))
 
 #URL of the .csv file from CISA
 dl = ('https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv')
@@ -19,9 +27,9 @@ print ('Date that CISA updated file: ',  date_check)
 
 #Check date of file against todays date
 if date_check == datetime.datetime.today():
-    print ('UPDATED TODAY!')
+    print (colored('UPDATED TODAY!', "green"))
 else:
-    print ('NOT YET UPDATED.')
+    print (colored('NOT YET UPDATED.', "red"))
 
 
 
