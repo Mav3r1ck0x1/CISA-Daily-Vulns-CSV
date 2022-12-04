@@ -40,7 +40,7 @@ time.sleep(7)
 
 
 #Opens and prints the CSV data
-with open(r'C:\Users\Blake Blackwell\PycharmProjects\CISADailyCSVParser\CVE-Vulns-Today.csv') as f:
+with open(r'C:\Users\path\to\csv\file\CVE-Vulns-Today.csv') as f:
     csv_reader = csv.reader(f)
     for line in csv_reader:
         print(line)
